@@ -151,6 +151,9 @@ body {
 }
 
 @media (max-width: 992px) {
+    .mainDivs {
+        font-size: 2.5rem;
+    }
     .snr {
         height: 40vh;
     }
@@ -159,6 +162,9 @@ body {
     }
     .title {
         font-size: 2.5rem;
+    }
+    .fighterDetails {
+        font-size: 1.5rem !important;
     }
 }
 
