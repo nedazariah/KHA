@@ -157,6 +157,9 @@ body {
     #contactInfo {
         height: 5vh;
     }
+    .title {
+        font-size: 2.5rem;
+    }
 }
 
 .snr img {
@@ -174,7 +177,7 @@ body {
 }
 
 #contactInfo a {
-    color: #056b29;
+    color: rgb(5, 107, 41);
 }
 
 #sensei {
@@ -210,6 +213,10 @@ body {
     transform: rotateY(180deg);
 }
 
+.fighter.flipped .fighterInner {
+    transform: rotateY(180deg);
+}
+
 .fighterInfo,
 .fighterDetails {
     position: absolute;
@@ -225,4 +232,5 @@ body {
 
 .fighterDetails {
     transform: rotateY(180deg);
+    background-color: rgba(0, 0, 0, 0.2);
 }
