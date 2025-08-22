@@ -17,9 +17,9 @@
     text-align: center;
     font-family: "SentyWen";
     font-weight: bolder;
-    font-size: 5vw;
+    font-size: 4rem;
     color: #056b29;
-    height: auto;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,13 +146,13 @@ body {
 }
 
 .snr {
-    height: 80vh;
+    height: 85vh;
     width: 100%;
 }
 
 @media (max-width: 992px) {
     .snr {
-        height: 45vh;
+        height: 40vh;
     }
     #contactInfo {
         height: 5vh;
