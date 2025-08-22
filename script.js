@@ -22,3 +22,9 @@ document.getElementById("enterText").onclick = function () {
         sensei.style.display = "flex";
     }, 1500);
 };
+
+document.querySelectorAll(".fighter").forEach((fighter) => {
+    fighter.addEventListener("click", () => {
+        fighter.classList.toggle("flipped");
+    });
+});
