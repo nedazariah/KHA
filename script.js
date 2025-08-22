@@ -25,6 +25,14 @@ document.getElementById("enterText").onclick = function () {
 
 document.querySelectorAll(".fighter").forEach((fighter) => {
     fighter.addEventListener("click", () => {
+        // Close any other open fighter
+        fighters.forEach((f) => {
+            if (f !== fighter) {
+                f.classList.remove("flipped");
+            }
+        });
+
+        // Toggle the clicked one
         fighter.classList.toggle("flipped");
     });
 });
