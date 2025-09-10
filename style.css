@@ -200,6 +200,7 @@ body {
     perspective: 1000px;
     border: 30px solid transparent;
     border-image: url(assets/border1_trans.jpg) 85;
+    cursor: pointer;
 }
 
 .fighterInner {
@@ -215,8 +216,14 @@ body {
     width: 85%;
 }
 
-.fighter:hover .fighterInner {
-    transform: rotateY(180deg);
+@media (hover: hover) and (pointer: fine) {
+    .fighter:hover .fighterInner {
+        transform: rotateY(180deg);
+    }
+
+    .fighter:not(.flipped):hover .fighterInner {
+        transform: rotateY(180deg);
+    }
 }
 
 .fighter.flipped .fighterInner {
