@@ -23,16 +23,23 @@ document.getElementById("enterText").onclick = function () {
     }, 1500);
 };
 
-document.querySelectorAll(".fighter").forEach((fighter) => {
-    fighter.addEventListener("click", () => {
-        // Close any other open fighter
-        fighters.forEach((f) => {
-            if (f !== fighter) {
-                f.classList.remove("flipped");
-            }
-        });
 
-        // Toggle the clicked one
-        fighter.classList.toggle("flipped");
+document.addEventListener("DOMContentLoaded", () => {
+    const fighters = document.querySelectorAll(".fighter");
+
+    fighters.forEach((fighter) => {
+        fighter.addEventListener("click", () => {
+            // Close all other fighters
+            fighters.forEach((f) => {
+                if (f !== fighter) {
+                    f.classList.remove("flipped");
+                }
+            });
+
+            // Toggle the clicked one
+            fighter.classList.toggle("flipped");
+        });
     });
 });
+
+
