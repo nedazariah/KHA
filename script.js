@@ -23,23 +23,22 @@ document.getElementById("enterText").onclick = function () {
     }, 1500);
 };
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const fighters = document.querySelectorAll(".fighter");
+    // True on phones/tablets where hover isn’t available
+    const isTouchDevice = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
 
     fighters.forEach((fighter) => {
-        fighter.addEventListener("click", () => {
-            // Close all other fighters
-            fighters.forEach((f) => {
-                if (f !== fighter) {
-                    f.classList.remove("flipped");
-                }
+        if (isTouchDevice) {
+            // Mobile: tap to flip
+            fighter.addEventListener("click", () => {
+                // close siblings
+                fighters.forEach((f) => {
+                    if (f !== fighter) f.classList.remove("flipped");
+                });
+                fighter.classList.toggle("flipped");
             });
-
-            // Toggle the clicked one
-            fighter.classList.toggle("flipped");
-        });
+        }
+        // Desktop: no click listener, hover handles flip
     });
 });
-
-
